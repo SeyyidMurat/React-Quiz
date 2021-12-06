@@ -1,0 +1,90 @@
+.quiz {
+   overflow: hidden;
+
+   &__title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: $title-color;
+      margin-bottom: 1rem;
+   }
+
+   &__wrapper {
+      display: flex;
+      width: 445px;
+      gap: 2rem;
+      transition: transform 0.8s ease-in-out;
+   }
+
+   &__container {
+      position: relative;
+      padding: 4.25rem 2rem;
+      background: $white;
+      border-radius: $rounded-md;
+      animation: fadeIn 3s;
+   }
+
+   &__question {
+      color: $question-color;
+      margin-bottom: 2rem;
+      cursor: pointer;
+
+      &:hover {
+         white-space: normal;
+         animation: textTruncate 1s ease-in-out;
+      }
+   }
+
+   &__content {
+      width: 380px;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__options {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+   }
+
+   &__next-btn {
+      align-self: flex-end;
+      position: absolute;
+      bottom: 10px;
+   }
+
+   &__result {
+      width: 380px;
+      text-align: center;
+      color: $result-color;
+      & > *:not(:first-child) {
+         margin-top: 70px;
+      }
+
+      &-title {
+         font-size: 3rem;
+      }
+
+      &-desc {
+         font-size: 1.5rem;
+
+         span {
+            color: $true-color;
+            font-size: 2.5rem;
+         }
+      }
+   }
+
+   .true {
+      background-color: $true-color;
+      color: white;
+      outline: 0;
+   }
+
+   .wrong {
+      background-color: $wrong-color;
+      color: white;
+      outline: 0;
+   }
+}
